@@ -1,0 +1,15 @@
+#Read in the csv file
+data<- read.csv("testfile.csv", header=TRUE, stringsAsFactors=FALSE)
+#confirm the file import has been successful 
+data
+#step 1 in setting up the variable outcomes to be assessed; for this example outcome1 is the variable being assessed
+mylogit <- glm(outcome1 ~ Count1, data = data, family = "binomial")
+#A summary of the coefficients from the fitted probabilities along with standard error and p-value
+summary(mylogit)
+#Next we prepare the data for the Firth method
+library(logistf)
+#Run the Firth method on the data
+fit1<-logistf(data=data, outcome1~Count1, firth=TRUE,p1=TRUE)
+#View the output data and interpret the results
+summary(fit1)
+
