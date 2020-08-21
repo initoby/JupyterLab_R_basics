@@ -1,13 +1,13 @@
 data<-read.csv(“meta.csv”, header=TRUE, stringsAsFactors=FALSE)
-#Imports the dataset “meta.csv”
+#Imports the dataset 'meta.csv'
 
 data 
 #This will verify that the dataset was correctly imported
 
-str(data) (hit “Enter” key)
+str(data) 
 #This will display all variables available in our imported file; this will also show the total # of individual observations
 
-Summary (data$Cigarette_Pack_Years); 
+Summary (data$Cigarette_Pack_Years)
 #This will perform summary statistics and assess individual variables 
 #This code performs summary statistics for the variable, “Cigarette_Pack_Years”, from the imported data
 #The summary level information provided is comprised of mean, median, minimum, maximum, 1st quartile and 3rd quartile  
